@@ -1,21 +1,74 @@
-# ManifestHub
+# Steam Manifest API
 
-Steam Depot Manifest Cache
+A free and simple API for accessing Steam manifest files, organized by Steam App ID.
 
-Update time: `2025-07-24`
+## 🚀 Overview
 
->[!NOTE]
->This repository is a complete fork of the original ManifestHub database, which got deleted on GitHub
+This project provides an easy way to download Steam manifest files for any Steam game using its App ID.  
+Each game is stored on its own branch, named after the Steam App ID.
 
-## 致倒卖者/Note for resellers
+Example:
+- Portal → App ID `400` → branch `400`
 
-* 如果再发现有倒卖本清单库的行为，本清单库中的清单将不会再更新。
-* If found out that there are still people reselling this manifesthub, we will stop updating the manifests in manifesthub.
+## 📦 How It Works
 
-## Steam 清单 API / Steam Manifest API
+Every Steam game is mapped to a Git branch using its App ID.
 
-* 支持最新清单及创意工坊清单 / Supports latest manifests and workshop manifests
-* API 调用方法: `https://api.manifesthub1.filegear-sg.me/manifest?apikey=<API密钥>&depotid=<depotid>&manifestid=<清单id>`
-* API Call Method: `https://api.manifesthub1.filegear-sg.me/manifest?apikey=<API Key>&depotid=<depotid>&manifestid=<manifest id>`
-* 获取API密钥/Get API Key: [https://manifesthub1.filegear-sg.me](https://manifesthub1.filegear-sg.me)
-* 免费API密钥有效期为24小时/Free API Key valid for 24 hours
+To download a manifest, use:
+
+archive/refs/heads/{appid}.zip
+
+### Example
+
+Portal (App ID 400):
+
+archive/refs/heads/400.zip
+
+## 🧠 Use Cases
+
+- Game modding and research  
+- Steam manifest archival  
+- Version tracking and analysis  
+- Automation tools requiring manifest data  
+
+## ⚙️ Usage
+
+1. Find the Steam App ID of the game  
+2. Replace `{appid}` in the endpoint  
+3. Download the corresponding `.zip` archive  
+
+## 📁 Repository Structure
+
+/
+├── 400        # Portal
+├── 570        # Dota 2
+├── 730        # Counter-Strike 2
+└── ...
+
+Each branch contains the manifest files for that specific Steam application.
+
+## ❗ Notes
+
+- This API is provided for free use  
+- Availability of manifests may vary by game  
+- Data is organized strictly by Steam App ID  
+- No guarantee of completeness or updates  
+
+## 🔮 Future Improvements
+
+- Automated manifest updates  
+- Game name search (instead of App ID)  
+- Metadata endpoints  
+- Optional API key / rate limiting system  
+
+## 📜 License
+
+This project is licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0).
+
+You are free to:
+- Use  
+- Share  
+- Modify  
+- Distribute  
+
+As long as proper attribution is given.

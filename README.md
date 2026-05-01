@@ -37,16 +37,6 @@ archive/refs/heads/400.zip
 2. Replace `{appid}` in the endpoint  
 3. Download the corresponding `.zip` archive  
 
-## 📁 Repository Structure
-
-/
-├── 400        # Portal
-├── 570        # Dota 2
-├── 730        # Counter-Strike 2
-└── ...
-
-Each branch contains the manifest files for that specific Steam application.
-
 ## ❗ Notes
 
 - This API is provided for free use  
